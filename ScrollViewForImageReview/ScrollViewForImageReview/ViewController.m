@@ -9,19 +9,33 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property(strong,nonatomic)UIImageView* imageView;
+@property(strong,nonatomic)UIImage* image;
 @end
 
 @implementation ViewController
-
+//懒加载
+-(UIImageView *)imageView{
+    if (_imageView==nil) {
+        _imageView=[[UIImageView alloc]init];
+        [self.scrollView addSubview:_imageView];
+    }
+    return _imageView;
+}
+-(void)setImage:(UIImage *)image{
+    _image=image;
+    //设置图像内容
+    self.imageView.image=image;
+    //设置图像视图根据图像自动调整大小
+    [self.imageView sizeToFit];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.image=[UIImage imageNamed:@"minion"];
+    self.scrollView.contentSize=self.imageView.bounds.size;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
