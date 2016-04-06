@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5T-4c-rFZ">
-                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="I5T-4c-rFZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="O4Z-Ut-wHg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I5T-4c-rFZ" secondAttribute="bottom" id="SjK-Sy-KpX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="I5T-4c-rFZ" secondAttribute="trailing" constant="-20" id="oke-Ia-FGy"/>
-                            <constraint firstItem="I5T-4c-rFZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yXq-7F-UG4"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="scrollView" destination="I5T-4c-rFZ" id="YZA-HL-Ejp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
